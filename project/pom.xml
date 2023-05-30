@@ -8,11 +8,11 @@
 		<version>3.1.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ticker</groupId>
+	<groupId>com.ticket</groupId>
 	<artifactId>Ticket_Bus</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Ticket_Bus</name>
-	<description>Ticker Bus project for Spring Boot</description>
+	<description>Ticket_Bus project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
