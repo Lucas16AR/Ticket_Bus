@@ -13,4 +13,23 @@ public class TripController {
     private Repository userRepository;
 
 
-}   
+    @GetMapping
+    public List<Trip> getAllTrips() {
+        return (List<Trip>) TripRepository.findAll();
+    }
+
+    @PostMapping
+    public void addTrip(@RequestBody Trip trip) {
+        TripRepository.save(trip);
+    }
+    @PutMapping
+    public void updateTrip(@RequestBody Trip trip) {
+        TripRepository.save(trip);
+    }
+    @DeleteMapping(value="/deleteTrip/{id}")
+    public ResponseEntity<String> deleteTrip(@PathVariable("id") Long id) {
+        TripRepository.deleteById(id);
+        return ResponseEntity.ok("Trip deleted successfully");
+    }
+}
+   
