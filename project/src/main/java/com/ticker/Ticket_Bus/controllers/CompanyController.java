@@ -13,7 +13,7 @@ import java.util.List;
 @RequestMapping("/company")
 public class CompanyController {
     @Autowired
-    private CompanyRepository companyRepository;
+    private CompanyService companyRepository;
 
     @GetMapping
     public List<Company> getAllCompany() {
