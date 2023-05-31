@@ -1,9 +1,10 @@
 import javax.persistence.*;
 import java.util.List;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "companies")
-public class Company {
+public class Company implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -77,7 +78,7 @@ public class Company {
     public void setBookings(List<Booking> bookings) {
         this.bookings = bookings;
     }
-    
+
     public List<City> getCities() {
         return cities;
     }

@@ -2,10 +2,11 @@ import javax.persistence.*;
 import java.util.Date;
 import java.sql.Time;
 import java.util.List;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "trips")
-public class Trip {
+public class Trip implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

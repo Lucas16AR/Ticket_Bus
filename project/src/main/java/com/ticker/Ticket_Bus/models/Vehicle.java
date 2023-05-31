@@ -1,9 +1,10 @@
 import javax.persistence.*;
 import java.util.List;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "vehicles")
-public class Vehicle {
+public class Vehicle implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

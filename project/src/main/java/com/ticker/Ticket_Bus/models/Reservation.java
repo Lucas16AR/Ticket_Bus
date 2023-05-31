@@ -1,10 +1,11 @@
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "reservations")
-public class Reservation {
+public class Reservation implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
