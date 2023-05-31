@@ -1,4 +1,5 @@
 package main.java.com.ticker.Ticket_Bus.controllers;
+import com.ticker.Ticket_Bus.models.Trip;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +11,7 @@ import java.util.List;
 @RequestMapping("/trip")
 public class TripController {
     @Autowired
-    private Repository userRepository;
+    private Repository tripRepository;
 
 
     @GetMapping
