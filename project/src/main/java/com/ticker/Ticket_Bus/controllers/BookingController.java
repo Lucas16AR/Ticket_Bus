@@ -1,6 +1,7 @@
 package main.java.com.ticker.Ticket_Bus.controllers;
 
 import com.ticker.Ticket_Bus.models.Booking;
+import com.ticker.Ticket_Bus.repositories.Booking;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
