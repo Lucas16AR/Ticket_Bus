@@ -1,14 +1,21 @@
+package main.java.com.ticker.Ticket_Bus.models;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.sql.Time;
 import java.util.List;
 import java.io.Serializable;
 
+import main.java.com.ticker.Ticket_Bus.models.City;
+import main.java.com.ticker.Ticket_Bus.models.Vehicle;
+import main.java.com.ticker.Ticket_Bus.models.Company;
+import main.java.com.ticker.Ticket_Bus.models.Booking;
+
 @Entity
 @Table(name = "trips")
-public class Trip implements Serializable{
+public class Trip implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     @Column(name = "date")

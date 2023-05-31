@@ -1,12 +1,18 @@
+package main.java.com.ticker.Ticket_Bus.models;
+
 import javax.persistence.*;
 import java.util.List;
 import java.io.Serializable;
 
+import main.java.com.ticker.Ticket_Bus.models.Vehicle;
+import main.java.com.ticker.Ticket_Bus.models.Booking;
+import main.java.com.ticker.Ticket_Bus.models.City;
+
 @Entity
 @Table(name = "companies")
-public class Company implements Serializable{
+public class Company implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     @Column(name = "name")
