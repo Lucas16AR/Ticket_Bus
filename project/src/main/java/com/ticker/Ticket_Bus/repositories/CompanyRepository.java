@@ -1,6 +1,5 @@
 package main.java.com.ticker.Ticket_Bus.repositories;
-#importa modelos
-#import ;
+import main.java.com.ticker.Ticket_Bus.models.Company;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
