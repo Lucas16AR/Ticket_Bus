@@ -20,6 +20,14 @@ public class Company {
     @OneToMany(mappedBy = "company")
     private List<Booking> bookings;
 
+    @ManyToMany
+    @JoinTable(
+        name = "company_city",
+        joinColumns = @JoinColumn(name = "company_id"),
+        inverseJoinColumns = @JoinColumn(name = "city_id")
+    )
+    private List<City> cities;
+
     public Company() {
     }
 
@@ -68,5 +76,13 @@ public class Company {
 
     public void setBookings(List<Booking> bookings) {
         this.bookings = bookings;
+    }
+    
+    public List<City> getCities() {
+        return cities;
+    }
+
+    public void setCities(List<City> cities) {
+        this.cities = cities;
     }
 }

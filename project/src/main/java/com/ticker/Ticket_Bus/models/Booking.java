@@ -8,11 +8,17 @@ public class Booking {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "origin")
-    private String origin;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
-    @Column(name = "destination")
-    private String destination;
+    @ManyToOne
+    @JoinColumn(name = "origin_city_id")
+    private City originCity;
+
+    @ManyToOne
+    @JoinColumn(name = "destination_city_id")
+    private City destinationCity;
 
     @ManyToOne
     @JoinColumn(name = "company_id")
@@ -47,20 +53,28 @@ public class Booking {
         this.id = id;
     }
 
-    public String getOrigin() {
-        return origin;
+    public User getUser() {
+        return user;
     }
 
-    public void setOrigin(String origin) {
-        this.origin = origin;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public String getDestination() {
-        return destination;
+    public City getOriginCity() {
+        return originCity;
     }
 
-    public void setDestination(String destination) {
-        this.destination = destination;
+    public void setOriginCity(City originCity) {
+        this.originCity = originCity;
+    }
+
+    public City getDestinationCity() {
+        return destinationCity;
+    }
+
+    public void setDestinationCity(City destinationCity) {
+        this.destinationCity = destinationCity;
     }
 
     public Company getCompany() {
