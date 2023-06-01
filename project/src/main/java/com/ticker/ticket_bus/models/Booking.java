@@ -40,9 +40,9 @@ public class Booking implements Serializable {
         // Empty constructor required by JPA
     }
 
-    public Booking(City origin_city_id, City destination_city_id, Company company) {
-        this.originCity = origin_city_id;
-        this.destinationCity = destination_city_id;
+    public Booking(City originCity, City destinationCity, Company company) {
+        this.originCity = originCity;
+        this.destinationCity = destinationCity;
         this.company = company;
     }
 
