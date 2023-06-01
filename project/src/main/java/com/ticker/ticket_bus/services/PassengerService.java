@@ -2,10 +2,9 @@ package com.ticker.ticket_bus.services;
 import com.ticker.ticket_bus.repositories.PassengerRepository;
 import com.ticker.ticket_bus.models.Passenger;
 import org.springframework.beans.factory.annotation.Autowired;
-// import org.springframework.beans.factory.stereotype.Service;
-// import java.util.List;
-// 
-// @Service
+import org.springframework.stereotype.Service;
+
+@Service
 public class PassengerService {
 
     @Autowired
@@ -27,7 +26,8 @@ public class PassengerService {
         return passengerRepository.findById(id).orElse(null);
     }
 
-    // public List<Passenger> getAllPassengers() {
-        // return passengerRepository.findAll();
-    // }
+    Iterable<Passenger> passengerIterable = passengerRepository.findAll();
+    public PassengerService(Iterable<Passenger> passengerIterable) {
+        this.passengerIterable = passengerIterable;
+    }
 }
