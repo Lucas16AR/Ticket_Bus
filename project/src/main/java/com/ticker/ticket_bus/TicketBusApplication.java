@@ -9,7 +9,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EntityScan(basePackages = {"com.ticker.ticket_bus.models"})
 @EnableJpaRepositories(basePackages = {"com.ticker.ticket_bus.repositories"})
 public class TicketBusApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(TicketBusApplication.class, args);
 	}

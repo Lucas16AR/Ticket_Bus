@@ -2,6 +2,7 @@ package com.ticker.ticket_bus.controllers;
 
 import com.ticker.ticket_bus.models.Vehicle;
 import com.ticker.ticket_bus.repositories.VehicleRepository;
+import org.springframework.stereotype.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@Controller
 @RestController
 @RequestMapping("/vehicle")
 public class VehicleController {
