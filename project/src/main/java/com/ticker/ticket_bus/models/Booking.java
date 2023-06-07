@@ -31,9 +31,7 @@ public class Booking implements Serializable {
     private List<Reservation> reservations;
 
     @ManyToMany
-    @JoinTable(name = "booking_passenger",
-               joinColumns = @JoinColumn(name = "booking_id"),
-               inverseJoinColumns = @JoinColumn(name = "passenger_id"))
+    @JoinTable(name = "booking_passenger", joinColumns = @JoinColumn(name = "booking_id"), inverseJoinColumns = @JoinColumn(name = "passenger_id"))
     private List<Passenger> passengers;
 
     public Booking() {
